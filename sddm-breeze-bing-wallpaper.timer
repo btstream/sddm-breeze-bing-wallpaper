@@ -1,0 +1,9 @@
+[Unit]
+Description=Update sddm-breeze theme's wallpaper from bing 
+
+[Timer]
+OnUnitActiveSec=8h
+Persistent=true
+
+[Install]
+WantedBy=timers.target
