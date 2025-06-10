@@ -1,7 +1,7 @@
 # Maintainer: Your Name <your@email.com>
 pkgname=sddm-breeze-bing-wallpaper
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Automatically set Bing daily wallpaper as SDDM breeze theme background"
 arch=('any')
 url="https://github.com/btstream/sddm-breeze-bing-wallpaper"
@@ -11,9 +11,9 @@ source=("sddm-breeze-bing-wallpaper.py"
         "sddm-breeze-bing-wallpaper.service"
         "sddm-breeze-bing-wallpaper.timer"
         "theme.conf.user")
-md5sums=('c940d60488e8a8c5c03115518cc24b71'
+md5sums=('8c27d4758f867986d2667f92a0255e8c'
          '4fa9dbdcbec551ac76210306f0ab9868'
-         'a38030abcbcfe3393e21d1cd69f624f4'
+         'd65b737562f3e88ea6829bb6833df743'
          '620dbce94ff5d50e5c7f8437be1c9ab9')
 
 package() {

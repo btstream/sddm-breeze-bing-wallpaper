@@ -58,6 +58,7 @@ def get_bing_wallpaper(save_path='./wallpapers', resolution='UHD', blur_radius=8
         # 尝试首选分辨率
         image_url = f"https://www.bing.com{image_info['urlbase']}_{resolution}.jpg"
         if download_image(image_url, save_path):
+            os.utime(save_path, (bing_date.timestamp(), bing_date.timestamp()))
             print(f"壁纸已保存到: {save_path}")
             return save_path
             
@@ -65,6 +66,7 @@ def get_bing_wallpaper(save_path='./wallpapers', resolution='UHD', blur_radius=8
         print("4K壁纸不可用，尝试下载2K分辨率...")
         image_url = f"https://www.bing.com{image_info['urlbase']}_2560x1440.jpg"
         if download_image(image_url, save_path):
+            os.utime(save_path, (bing_date.timestamp(), bing_date.timestamp()))
             print(f"2K壁纸已保存到: {save_path}")
             return save_path
             
@@ -72,6 +74,7 @@ def get_bing_wallpaper(save_path='./wallpapers', resolution='UHD', blur_radius=8
         print("2K壁纸不可用，尝试默认分辨率...")
         image_url = f"https://www.bing.com{image_info['urlbase']}_1920x1080.jpg"
         if download_image(image_url, save_path):
+            os.utime(save_path, (bing_date.timestamp(), bing_date.timestamp()))
             print(f"默认分辨率壁纸已保存到: {save_path}")
             return save_path
             

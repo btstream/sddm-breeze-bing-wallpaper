@@ -1,8 +1,8 @@
 [Unit]
-Description=Update sddm-breeze theme's wallpaper from bing 
+Description=Update sddm-breeze theme's wallpaper from bing
 
 [Timer]
-OnUnitActiveSec=8h
+OnCalendar=*-*-* 16:30
 Persistent=true
 
 [Install]
