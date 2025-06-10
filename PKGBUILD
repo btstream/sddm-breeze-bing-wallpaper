@@ -13,7 +13,7 @@ source=("sddm-breeze-bing-wallpaper.py"
         "theme.conf.user")
 md5sums=('8c27d4758f867986d2667f92a0255e8c'
          '4fa9dbdcbec551ac76210306f0ab9868'
-         '57a4343bd765e9e88b9472069c689885'
+         '014e2161eab4379d340be395e333a07c'
          '620dbce94ff5d50e5c7f8437be1c9ab9')
 
 package() {
