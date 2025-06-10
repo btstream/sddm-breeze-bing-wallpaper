@@ -2,7 +2,7 @@
 Description=Update sddm-breeze theme's wallpaper from bing
 
 [Timer]
-OnCalendar=*-*-* 16:30
+OnCalendar=0/2:0
 Persistent=true
 
 [Install]
