@@ -16,13 +16,13 @@ def download_image(url, save_path):
         print(f"下载失败: {e}")
         return False
 
-def get_bing_wallpaper(save_path='./wallpapers', resolution='UHD', blur_radius=8):
+def get_bing_wallpaper(save_path='./wallpapers', resolution='UHD'):
     """
     从Bing获取每日壁纸并保存到本地
     
     参数:
-        save_dir (str): 保存目录，默认为'./wallpapers'
-        resolution (str): 首选图片分辨率，默认为'3840x2160'(UHD, 4K)
+        save_path (str): 保存目录，默认为'./wallpapers'
+        resolution (str): 首选图片分辨率，默认为'UHD'
     """
     
     # Bing壁纸API
@@ -89,12 +89,7 @@ def get_bing_wallpaper(save_path='./wallpapers', resolution='UHD', blur_radius=8
 
 if __name__ == "__main__":
     save_path = "/usr/share/sddm/themes/breeze/wallpaper"
-    blur_radius = 8
-    if len(sys.argv) == 2:
+    if len(sys.argv) >= 2:
         save_path = sys.argv[1]
 
-    if len(sys.argv) == 3:
-        save_path = sys.argv[1]
-        blur_radius = int(sys.argv[2])
-
-    get_bing_wallpaper(save_path=save_path, blur_radius=blur_radius)
+    get_bing_wallpaper(save_path=save_path)

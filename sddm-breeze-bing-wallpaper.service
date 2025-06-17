@@ -5,6 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=simple
+ExecStartPre=/bin/sh -c 'until ping -c1 www.bing.com; do sleep 1; done;'
 ExecStart=/usr/bin/python3 /usr/lib/sddm/sddm-breeze-bing-wallpaper.py
 
 [Install]
